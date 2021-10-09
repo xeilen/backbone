@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <title>Backbone</title>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center mb-5">Backbone Header</h1>
+    <form>
+        <div class="mb-3">
+            <label for="author" class="col-form-label">Author</label>
+            <input type="text" class="form-control" id="author">
+        </div>
+
+        <div class="mb-3">
+            <label for="title" class="col-form-label">Title</label>
+            <input type="text" class="form-control" id="title">
+        </div>
+
+        <div class="mb-3">
+            <label for="url" class="col-form-label">URL</label>
+            <input type="text" class="form-control" id="url">
+        </div>
+
+        <div class="mb-3">
+            <button class="btn btn-success add-blog">Add Blog</button>
+        </div>
+
+    </form>
+
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Author</th>
+                <th scope="col">Title</th>
+                <th scope="col">URL</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="blogs-list"></tbody>
+    </table>
+</div>
+
+<script type="text/template" class="blog-list-template">
+    <td class="author"><%= author %></td>
+    <td class="title"><%= title %></td>
+    <td class="url"><%= url %></td>
+    <td>
+        <div class="initial-buttons">
+            <button class="btn btn-warning edit-blog">Edit</button>
+            <button class="btn btn-danger delete-blog">Delete</button>
+        </div>
+        <div class="editing-mode" style="display: none">
+            <button class="btn btn-success update-blog">Update</button>
+            <button class="btn btn-danger cancel-edit">Cancel</button>
+        </div>
+    </td>
+</script>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/backbone/backbone.js"></script>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
